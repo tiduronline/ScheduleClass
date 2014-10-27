@@ -26,11 +26,6 @@ def check_time(clocks):
     
 
 def check_current_sche():
-    request = urllib2.Request("http://forum.mercubuana-yogya.ac.id/jadwal-kampus-2/")
-    request.add_header("User-Agent", "TiduronlineBot @ tiduronline.com")
-    resp = urllib2.urlopen(request)
-    return resp.fp._sock.recv()
-
     content = False
     locked = False
     while not locked:
@@ -106,7 +101,7 @@ def build_json(content):
     datas['time'] = curr_time + ".00 - " + str(one_half) + ".30"
 
     
-    with open('get.json', "w") as fp:
+    with open('./www/get.json', "w") as fp:
         fp.write(dumps(datas))
 
     tmp_data = None
@@ -119,10 +114,7 @@ def build_json(content):
 
 
 if __name__ == '__main__':
-    content = check_current_sche()
-    build_json(content)
-    exit(0)
-
+  
     if not path.isfile('.hash'): 
         with open('.hash', 'w') as fhash:
             fhash.write('') 
