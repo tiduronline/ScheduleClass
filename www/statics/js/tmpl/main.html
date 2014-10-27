@@ -1,0 +1,41 @@
+<div class="container-fluid">
+	<div class="row schedule-date">
+		
+		<div class="wrapper-date">
+			<h2>{{ tbDate }}</h2>
+			<h5>Pukul <span style="font-weight:bold">{{ tbTime }}</span></h5>
+
+			<div class="title">
+				<p>Mercubuana</p>
+				<p>Yogyakarta // kampus II</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="space-blue col-md-12"></div>
+		<div class="wrapper-table">
+			<table class="table col-md-12">
+				<thead>
+					<tr>
+						<th data-ng-repeat="head in tbHeaders" class="{{ hideMobile( $index ) }}">{{ head }}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="items in tbItems" data-ng-class="{ odd : $odd }"> 
+						<td data-ng-repeat="item in items track by $index" class="{{ hideMobile( $index ) }}" style="text-align:center;">
+
+							<a data-ng-show="$index == 1" href="/detail/{{ items[0] }}"> {{ item }} </a>
+							<span data-ng-hide="$index == 1">{{ item }}</span>
+
+						</td>
+					</tr>
+				</tbody>
+				<tfoot><tr><td  colspan="10"></td></tr></tfoot>
+			</table>
+		</div>	
+
+	</div>
+</div>
+<div class="update-data" data-ng-click="updateData()">Update</div>
