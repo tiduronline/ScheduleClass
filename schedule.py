@@ -29,7 +29,7 @@ def check_current_sche():
     content = False
     locked = False
     while not locked:
-        request = urllib2.Request("http://forum.mercubuana-yogya.ac.id/jadwal-kampus-2/")
+        request = urllib2.Request("[nama host]")
         request.add_header("User-Agent", "TiduronlineBot @ tiduronline.com")
         resp = urllib2.urlopen(request)
         
