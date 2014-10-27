@@ -1,25 +1,49 @@
 <!DOCTYPE html>
-<html data-ng-app="Schedule">
+<html lang="en" data-ng-app="Schedule">
 <head>
-	<base href="/jadwal/" />
-	<title>Jadwal</title>
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+	<base href="/jadwal/www/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Jadwal kelas Mercubuana Kampus 2</title>
 
-	<link rel="stylesheet" type="text/css" href="statics/css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="statics/css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700,300' rel='stylesheet' type='text/css'>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/statics/js/html5shiv.js"></script>
+      <script src="/statics/js/respond.min.js"></script>
+      <![endif]-->
 
-	<script type="text/javascript" src="statics/js/libs/html5shiv.js"></script>
+
+	<link href="/tour/favicon.ico" type="image/x-icon" rel="icon">
+	<link href="/tour/favicon.ico" type="image/x-icon" rel="shortcut icon">
+	
+	<link rel="stylesheet" type="text/css" href="statics/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="statics/css/main.css">
+	
 
 </head>
 <body>
-	<div id="wrapper" data-ng-view></div>
+	<div id="wrapper">
 
-	<footer>
-		<p>Development in progress by Verri Andriawan</p>
-		<p>Terima kasih banyak <a href="http://imm.web.id/">Mr. Imam S</a></p>
-	</footer>
+        <div data-ng-view></div>
+        
 
-	
+        <div class="container">
+            <div id="footer">
+                <div class="row">
+                	<p>Development in progress by <strong>Verri Andriawan</strong> <br />
+					Terima kasih banyak <strong><a href="http://imm.web.id/">Mr. Imam S</a></strong></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+
 	<script type="text/javascript" src="statics/js/libs/jquery.min.js"></script>
 	<script type="text/javascript" src="statics/js/libs/bootstrap.js"></script>
 	
@@ -32,5 +56,7 @@
 	<script type="text/javascript" src="statics/js/application/app.js"></script>
 	<script type="text/javascript" src="statics/js/application/controller.js"></script>
 	<script type="text/javascript" src="statics/js/application/service.js"></script>
-</body>
+				
+
+	</body>
 </html>

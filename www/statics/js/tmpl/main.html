@@ -1,41 +1,58 @@
-<div class="container-fluid">
-	<div class="row schedule-date">
-		
-		<div class="wrapper-date">
-			<h2>{{ tbDate }}</h2>
-			<h5>Pukul <span style="font-weight:bold">{{ tbTime }}</span></h5>
+ <div id="header">
+ 	<div class="container">
+	 	<div class="row">
+	 		<div class="col-md-2 pull-left">
+	 			<div class="date">
+		 			<p>{{ tbDate['d'] }}</p>
+		 			<p>{{ tbDate['m'] }}</p>
+		 			<p>{{ tbDate['y'] }}</p>
+	 			</div>
+	 			<div class="time">
+	 				{{ tbTime }}
+	 			</div>
 
-			<div class="title">
-				<p>Mercubuana</p>
-				<p>Yogyakarta // kampus II</p>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="space-blue col-md-12"></div>
-		<div class="wrapper-table">
-			<table class="table col-md-12">
-				<thead>
-					<tr>
-						<th data-ng-repeat="head in tbHeaders" class="{{ hideMobile( $index ) }}">{{ head }}</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr data-ng-repeat="items in tbItems" data-ng-class="{ odd : $odd }"> 
-						<td data-ng-repeat="item in items track by $index" class="{{ hideMobile( $index ) }}" style="text-align:center;">
-
-							<a data-ng-show="$index == 1" href="/detail/{{ items[0] }}"> {{ item }} </a>
-							<span data-ng-hide="$index == 1">{{ item }}</span>
-
-						</td>
-					</tr>
-				</tbody>
-				<tfoot><tr><td  colspan="10"></td></tr></tfoot>
-			</table>
-		</div>	
-
+	 		</div>
+	 		<div class="col-md-6 pull-left">
+	 			<h1>Mercubuana<span>yogyakarta</span></h1>
+	 		</div>
+	 		
+	 		<div class="col-md-4 pull-right">
+		 		<div class="detail">
+		 			<h5>Kampus II</h5>
+		 			<p>Jl. Jembatan Merah No. 84C Gejayan, Yogyakarta 55283. <br /> Telp: 0274-584922, 550703, 550704 </p>
+		 		</div>
+	 		</div>
+	 	</div>
 	</div>
 </div>
-<div class="update-data" data-ng-click="updateData()">Update</div>
+
+
+<div id="content" class="container">
+	
+    <div class="row">
+        <div id="dashboard-content" class="col-md-12">
+        	<div class="row">
+			    <div>
+			        <table class="table">
+						<thead>
+							<tr>
+								<th data-ng-repeat="head in tbHeaders" class="{{ hideMobile( $index ) }}">{{ head }}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-ng-repeat="items in tbItems" data-ng-class="{ odd : $odd }"> 
+								<td data-ng-repeat="item in items track by $index" class="{{ hideMobile( $index ) }}" style="text-align:center;">
+
+									<a data-ng-show="$index == 1" href="/detail/{{ items[0] }}"> {{ item }} </a>
+									<span data-ng-hide="$index == 1">{{ item }}</span>
+
+								</td>
+							</tr>
+						</tbody>
+						<tfoot><tr><td  colspan="10"></td></tr></tfoot>
+					</table>
+			    </div>
+			</div>
+		</div>
+    </div>
+</div>

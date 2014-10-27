@@ -167,22 +167,22 @@ a:hover { text-decoration: none; }
 	}
 
 footer {
-	position: absolute;
+	/*position: absolute;
 	left: -100px;
-	bottom: 200px;
+	top: 370px;*/
 	text-align: center;
 	color:  #df6c4f;
-
-	-webkit-transform: rotate(-90deg);
+	line-height: 20px;
+	/*-webkit-transform: rotate(-90deg);
 	-moz-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
 	-o-transform: rotate(-90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);*/
 
 }
 
+
 .update-data {
-	padding: 20px;
 	position: fixed;
 	bottom: 50%;
 	right: 0px;
