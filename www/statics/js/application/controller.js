@@ -28,9 +28,10 @@ Schedule.controller('MainController', ['$scope', '$interval', 'requestService', 
 
 	$scope.updateData = function(){
 		var timestamp = new Date().getTime();
+
 		// Get data From URL
 		reqServ.scheduleReq(
-			'/jadwal/www/get.json?'+timestamp,
+			'/get.json?'+timestamp,
 
 			// check if Success
 			function(data){
@@ -62,8 +63,8 @@ Schedule.controller('MainController', ['$scope', '$interval', 'requestService', 
 
 	$scope.updateData();
 
-	// var realtime = $interval(function(){
-	// 	$scope.updateData();
-	// }, 20000);
+	var realtime = $interval(function(){
+		$scope.updateData();
+	}, 20000);
 
 }]);

@@ -21,7 +21,7 @@ var Schedule = angular.module('Schedule', [ 'ngRoute','ngResource' ])
 			 */
 
 			.when('/', { 
-				templateUrl : '/jadwal/www/statics/js/tmpl/main.html',
+				templateUrl : '/statics/js/tmpl/main.html',
 				controller : 'MainController'
 			})
 
